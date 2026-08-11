@@ -190,11 +190,70 @@ if (
     });
 
 
-    /* ================= DEFAULT CATEGORY ================= */
+    /* ================= URL CATEGORY ================= */
 
-    /* Garment is displayed when page loads */
+    const urlParams =
+        new URLSearchParams(window.location.search);
 
-    applyFilter("garment");
+    const selectedCategory =
+        urlParams.get("category");
+
+
+    /* ================= INITIAL CATEGORY ================= */
+
+    if (selectedCategory) {
+
+        /*
+         * Find the button matching
+         * the category from the URL
+         */
+
+        const matchingButton =
+            document.querySelector(
+                `.filter-btn[data-filter="${selectedCategory}"]`
+            );
+
+
+        if (matchingButton) {
+
+            /* Remove active from all buttons */
+
+            filterButtons.forEach(btn => {
+
+                btn.classList.remove("active");
+
+            });
+
+
+            /* Activate matching button */
+
+            matchingButton.classList.add("active");
+
+
+            /* Show matching category */
+
+            applyFilter(selectedCategory);
+
+        } else {
+
+            /* If URL category is invalid,
+               show Garment */
+
+            applyFilter("garment");
+
+        }
+
+    } else {
+
+        /*
+         * No category in URL,
+         * so show Garment by default
+         */
+
+        applyFilter("garment");
+
+    }
+
 
 }
 
@@ -423,3 +482,29 @@ document
         }
 
     });
+
+/* =========================================================
+   LUXURY PRELOADER
+   ========================================================= */
+
+const preloader = document.getElementById("preloader");
+
+if (preloader) {
+
+    window.addEventListener("load", () => {
+
+        // Small delay so the animation feels intentional
+        setTimeout(() => {
+
+            preloader.classList.add("hide");
+
+            // Remove from DOM after fade-out
+            setTimeout(() => {
+                preloader.style.display = "none";
+            }, 1000);
+
+        }, 900);
+
+    });
+
+}
