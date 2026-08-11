@@ -120,21 +120,41 @@ revealElements.forEach(element => {
 /* ================= PORTFOLIO FILTER ================= */
 
 const filterButtons =
-    document.querySelectorAll(
-        ".filter-btn"
-    );
-
+    document.querySelectorAll(".filter-btn");
 
 const portfolioItems =
-    document.querySelectorAll(
-        ".portfolio-item"
-    );
-
+    document.querySelectorAll(".portfolio-item");
 
 if (
     filterButtons.length &&
     portfolioItems.length
 ) {
+
+    /* ================= FILTER FUNCTION ================= */
+
+    const applyFilter = (filter) => {
+
+        portfolioItems.forEach(item => {
+
+            const category =
+                item.dataset.category;
+
+            if (category === filter) {
+
+                item.classList.remove("hidden");
+
+            } else {
+
+                item.classList.add("hidden");
+
+            }
+
+        });
+
+    };
+
+
+    /* ================= BUTTON CLICK ================= */
 
     filterButtons.forEach(button => {
 
@@ -146,51 +166,38 @@ if (
                     button.dataset.filter;
 
 
+                /* Remove active from all buttons */
+
                 filterButtons.forEach(btn => {
 
-                    btn.classList.remove(
-                        "active"
-                    );
+                    btn.classList.remove("active");
 
                 });
 
 
-                button.classList.add(
-                    "active"
-                );
+                /* Add active to clicked button */
+
+                button.classList.add("active");
 
 
-                portfolioItems.forEach(item => {
+                /* Apply selected category */
 
-                    const category =
-                        item.dataset.category;
-
-
-                    if (
-                        filter === "all" ||
-                        category === filter
-                    ) {
-
-                        item.classList.remove(
-                            "hidden"
-                        );
-
-                    } else {
-
-                        item.classList.add(
-                            "hidden"
-                        );
-
-                    }
-
-                });
+                applyFilter(filter);
 
             }
         );
 
     });
 
+
+    /* ================= DEFAULT CATEGORY ================= */
+
+    /* Garment is displayed when page loads */
+
+    applyFilter("garment");
+
 }
+
 
 
 /* ================= LIGHTBOX ================= */

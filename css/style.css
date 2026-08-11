@@ -27,12 +27,10 @@
         sans-serif;
 
     --transition:
-        0.5s cubic-bezier(
-            0.22,
+        0.5s cubic-bezier(0.22,
             1,
             0.36,
-            1
-        );
+            1);
 
 }
 
@@ -197,19 +195,24 @@ button {
 
 
 .logo {
-
-    font-family: var(--serif);
-
-    font-size: 30px;
-
-    font-weight: 600;
-
-    letter-spacing: 3px;
-
-    color: var(--gold);
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
+.logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
 
 .logo span {
 
@@ -282,7 +285,9 @@ button {
 
     height: 42px;
 
-    background: transparent;
+    background: white;
+
+    border-radius: 30%;
 
 }
 
@@ -437,12 +442,10 @@ button {
     inset: 0;
 
     background:
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,.75),
-            rgba(0,0,0,.25),
-            rgba(0,0,0,.15)
-        );
+        linear-gradient(90deg,
+            rgba(0, 0, 0, .75),
+            rgba(0, 0, 0, .25),
+            rgba(0, 0, 0, .15));
 
 }
 
@@ -477,11 +480,9 @@ button {
 
     font-family: var(--serif);
 
-    font-size: clamp(
-        90px,
-        15vw,
-        220px
-    );
+    font-size: clamp(90px,
+            15vw,
+            220px);
 
     font-weight: 300;
 
@@ -518,7 +519,7 @@ button {
 
     line-height: 1.8;
 
-    color: rgba(255,255,255,.8);
+    color: rgba(255, 255, 255, .8);
 
 }
 
@@ -580,7 +581,7 @@ button {
 
     padding: 17px 26px;
 
-    border: 1px solid rgba(255,255,255,.5);
+    border: 1px solid rgba(255, 255, 255, .5);
 
     color: var(--white);
 
@@ -617,7 +618,7 @@ button {
 
 .luxury-button:hover span {
 
-    transform: translate(5px,-5px);
+    transform: translate(5px, -5px);
 
 }
 
@@ -652,11 +653,9 @@ button {
 
     font-weight: 400;
 
-    font-size: clamp(
-        50px,
-        7vw,
-        100px
-    );
+    font-size: clamp(50px,
+            7vw,
+            100px);
 
     line-height: .95;
 
@@ -719,8 +718,7 @@ button {
     display: grid;
 
     grid-template-columns:
-        1.3fr
-        .7fr;
+        1.3fr .7fr;
 
     gap: 100px;
 
@@ -780,8 +778,7 @@ button {
     display: grid;
 
     grid-template-columns:
-        1.35fr
-        .65fr;
+        1.35fr .65fr;
 
     gap: 30px;
 
@@ -820,8 +817,7 @@ button {
     object-fit: cover;
 
     transition:
-        transform 1s
-        cubic-bezier(.2,.8,.2,1);
+        transform 1s cubic-bezier(.2, .8, .2, 1);
 
 }
 
@@ -980,8 +976,7 @@ button {
     text-align: center;
 
     background:
-        url("../images/work-04.jpg")
-        center/cover no-repeat;
+        url("../images/work-04.jpg") center/cover no-repeat;
 
     color: var(--white);
 
@@ -994,7 +989,7 @@ button {
 
     inset: 0;
 
-    background: rgba(0,0,0,.65);
+    background: rgba(0, 0, 0, .65);
 
 }
 
@@ -1005,7 +1000,7 @@ button {
 
     z-index: 2;
 
-    width: min(900px,90%);
+    width: min(900px, 90%);
 
 }
 
@@ -1027,11 +1022,9 @@ button {
 
     font-weight: 300;
 
-    font-size: clamp(
-        50px,
-        7vw,
-        100px
-    );
+    font-size: clamp(50px,
+            7vw,
+            100px);
 
     line-height: .95;
 
@@ -1059,8 +1052,7 @@ button {
     display: grid;
 
     grid-template-columns:
-        .8fr
-        1.2fr;
+        .8fr 1.2fr;
 
     gap: 100px;
 
@@ -1153,11 +1145,9 @@ button {
 
     font-family: var(--serif);
 
-    font-size: clamp(
-        100px,
-        15vw,
-        220px
-    );
+    font-size: clamp(100px,
+            15vw,
+            220px);
 
     color: var(--gold);
 
@@ -1166,7 +1156,7 @@ button {
 }
 
 
-.achievement-content > span {
+.achievement-content>span {
 
     font-size: 10px;
 
@@ -1179,11 +1169,9 @@ button {
 
     font-family: var(--serif);
 
-    font-size: clamp(
-        60px,
-        8vw,
-        110px
-    );
+    font-size: clamp(60px,
+            8vw,
+            110px);
 
     font-weight: 300;
 
@@ -1232,7 +1220,7 @@ button {
 }
 
 
-.cta-inner > p {
+.cta-inner>p {
 
     font-size: 10px;
 
@@ -1363,11 +1351,9 @@ button {
 
     font-family: var(--serif);
 
-    font-size: clamp(
-        90px,
-        14vw,
-        190px
-    );
+    font-size: clamp(90px,
+            14vw,
+            190px);
 
     font-weight: 300;
 
@@ -1405,8 +1391,7 @@ button {
     display: grid;
 
     grid-template-columns:
-        .8fr
-        1.2fr;
+        .8fr 1.2fr;
 
     gap: 100px;
 
@@ -1475,11 +1460,9 @@ button {
 
     font-family: var(--serif);
 
-    font-size: clamp(
-        50px,
-        7vw,
-        100px
-    );
+    font-size: clamp(50px,
+            7vw,
+            100px);
 
     line-height: .95;
 
@@ -1502,8 +1485,7 @@ button {
     display: grid;
 
     grid-template-columns:
-        .35fr
-        1fr;
+        .35fr 1fr;
 
     gap: 80px;
 
@@ -1574,7 +1556,7 @@ button {
     display: grid;
 
     grid-template-columns:
-        repeat(3,1fr);
+        repeat(3, 1fr);
 
     gap: 50px;
 
@@ -1645,7 +1627,7 @@ button {
 }
 
 
-.achievement-card > span {
+.achievement-card>span {
 
     color: var(--gold);
 
@@ -1660,11 +1642,9 @@ button {
 
     font-family: var(--serif);
 
-    font-size: clamp(
-        60px,
-        9vw,
-        120px
-    );
+    font-size: clamp(60px,
+            9vw,
+            120px);
 
     font-weight: 300;
 
@@ -1700,7 +1680,7 @@ button {
     display: grid;
 
     grid-template-columns:
-        repeat(2,1fr);
+        repeat(2, 1fr);
 
 }
 
@@ -1803,7 +1783,7 @@ button {
     display: grid;
 
     grid-template-columns:
-        repeat(2,1fr);
+        repeat(2, 1fr);
 
     gap: 30px;
 
@@ -1851,8 +1831,7 @@ button {
     object-fit: cover;
 
     transition:
-        transform 1s
-        cubic-bezier(.2,.8,.2,1);
+        transform 1s cubic-bezier(.2, .8, .2, 1);
 
 }
 
@@ -1888,10 +1867,8 @@ button {
     color: var(--white);
 
     background:
-        linear-gradient(
-            transparent,
-            rgba(0,0,0,.75)
-        );
+        linear-gradient(transparent,
+            rgba(0, 0, 0, .75));
 
     opacity: 0;
 
@@ -1948,7 +1925,7 @@ button {
 
     z-index: 1000;
 
-    background: rgba(0,0,0,.95);
+    background: rgba(0, 0, 0, .95);
 
     display: flex;
 
@@ -2020,7 +1997,7 @@ button {
 }
 
 
-.contact-intro > p:not(.eyebrow) {
+.contact-intro>p:not(.eyebrow) {
 
     color: var(--gray);
 
@@ -2165,11 +2142,9 @@ button {
 
     font-family: var(--serif);
 
-    font-size: clamp(
-        60px,
-        8vw,
-        110px
-    );
+    font-size: clamp(60px,
+            8vw,
+            110px);
 
     font-weight: 300;
 
@@ -2195,8 +2170,7 @@ button {
 
     transition:
         opacity .9s ease,
-        transform .9s
-        cubic-bezier(.22,1,.36,1);
+        transform .9s cubic-bezier(.22, 1, .36, 1);
 
 }
 
@@ -2251,11 +2225,9 @@ button {
 
     .hero-title {
 
-        font-size: clamp(
-            75px,
-            18vw,
-            150px
-        );
+        font-size: clamp(75px,
+                18vw,
+                150px);
 
     }
 
@@ -2466,6 +2438,307 @@ button {
     .lightbox img {
 
         max-width: 95%;
+
+    }
+
+}
+
+/* ================= FOOTER LOGO ================= */
+
+.footer-brand h2 {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+.footer-brand h2 img {
+    display: block;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+
+    .logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .logo img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .footer-brand h2 img {
+
+        width: 70px;
+
+        height: 70px;
+
+    }
+
+}
+
+/* =========================================
+   ACHIEVEMENTS
+========================================= */
+
+.achievements-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 1px;
+
+    background: rgba(17, 17, 17, 0.18);
+
+    margin-top: 60px;
+}
+
+
+.achievement-card {
+
+    position: relative;
+
+    background: #ffffff;
+
+    padding: 55px 45px;
+
+    min-height: 390px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    transition:
+        transform 0.5s ease,
+        background 0.5s ease;
+
+    overflow: hidden;
+}
+
+
+.achievement-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: #111111;
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.achievement-card:hover::before {
+
+    transform: scaleX(1);
+
+}
+
+
+.achievement-card:hover {
+
+    background: #f8f7f4;
+
+    transform: translateY(-8px);
+
+}
+
+
+.achievement-number {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    margin-bottom: 35px;
+
+}
+
+
+.achievement-year {
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+
+    color: #777;
+
+    margin-bottom: 20px;
+
+}
+
+
+.achievement-card h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: clamp(
+        36px,
+        4vw,
+        56px
+    );
+
+    line-height: 0.95;
+
+    font-weight: 400;
+
+    margin: 0 0 30px;
+
+}
+
+
+.achievement-card h2 i {
+
+    display: block;
+
+    font-weight: 400;
+
+    font-style: italic;
+
+}
+
+
+.achievement-card p {
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    color: #555;
+
+    max-width: 420px;
+
+    margin-top: auto;
+
+}
+
+
+/* Featured Achievement */
+
+.achievement-featured {
+
+    background: #111111;
+
+    color: #ffffff;
+
+}
+
+
+.achievement-featured .achievement-year {
+
+    color: #aaa;
+
+}
+
+
+.achievement-featured p {
+
+    color: #cfcfcf;
+
+}
+
+
+.achievement-featured::before {
+
+    background: #D4AF37;
+
+}
+
+
+.achievement-featured:hover {
+
+    background: #171717;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .achievements-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 1px;
+
+    }
+
+
+    .achievement-card {
+
+        min-height: 330px;
+
+        padding: 45px 30px;
+
+    }
+
+
+    .achievement-card h2 {
+
+        font-size: 42px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .achievement-card {
+
+        padding: 40px 25px;
+
+        min-height: 300px;
+
+    }
+
+
+    .achievement-card h2 {
+
+        font-size: 38px;
+
+    }
+
+
+    .achievement-card p {
+
+        font-size: 13px;
+
+        line-height: 1.8;
 
     }
 
