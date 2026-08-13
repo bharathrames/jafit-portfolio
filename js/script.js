@@ -367,69 +367,44 @@ if (
 }
 
 
-/* ================= CONTACT FORM ================= */
+/* ================= CONTACT FORM → WHATSAPP ================= */
 
-const contactForm =
-    document.getElementById(
-        "contactForm"
-    );
-
+const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
 
-    contactForm.addEventListener(
-        "submit",
-        event => {
+    contactForm.addEventListener("submit", function (event) {
 
-            event.preventDefault();
+        event.preventDefault();
 
+        // Get form values
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const subject = document.getElementById("subject").value.trim();
+        const message = document.getElementById("message").value.trim();
 
-            const name =
-                document.getElementById(
-                    "name"
-                ).value.trim();
+        // WhatsApp number
+        const whatsappNumber = "918015452392";
 
+        // Create WhatsApp message
+        const whatsappMessage =
+            `Hello Jafit Jessica,
+My name is ${name}.
+Email: ${email}
+Subject: ${subject || "General Enquiry"}
+Message:${message}
+Thank you.`;
 
-            const email =
-                document.getElementById(
-                    "email"
-                ).value.trim();
+        // Encode message for WhatsApp URL
+        const encodedMessage = encodeURIComponent(whatsappMessage);
 
+        // Open WhatsApp
+        const whatsappURL =
+            `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
-            const message =
-                document.getElementById(
-                    "message"
-                ).value.trim();
+        window.open(whatsappURL, "_blank");
 
-
-            const status =
-                document.getElementById(
-                    "formStatus"
-                );
-
-
-            if (
-                !name ||
-                !email ||
-                !message
-            ) {
-
-                status.textContent =
-                    "Please complete all required fields.";
-
-                return;
-
-            }
-
-
-            status.textContent =
-                "Thank you. Your message is ready to send.";
-
-
-            contactForm.reset();
-
-        }
-    );
+    });
 
 }
 
